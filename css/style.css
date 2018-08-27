@@ -1,0 +1,91 @@
+/*============ Сброс стилей =============*/
+* 
+{
+margin: 0;
+}
+html, body
+{
+height: 100%;
+}
+.clearfix::after
+{
+    content: "";
+    display: table;
+    clear: both;
+
+}
+/*============ Основные стили =============*/
+body
+{
+background: #fff;
+color: #222;
+display: flex;
+flex-direction: column;
+    font: 16px/24px Arial,Tahoma,sans-serif;
+}
+.header
+{
+height: 100px;
+background: red;
+flex-grow: 0;
+}
+.menu
+{
+background: green;
+}
+.content
+{
+background: white;
+flex-grow: 1;
+text-align: justify;
+}
+.footer
+{
+flex-grow: 0;
+background: blue;
+}
+.mid
+{
+    width: 90%;
+    background: yellow;
+    margin: 0 auto;
+}
+/*============ Шапка =============*/
+/*============ Меню =============*/
+.img
+{
+
+}
+.menu
+{
+    float: right;
+    height: 100px;
+    line-height: 100px;
+}
+.links
+{
+    text-decoration: none;
+    margin-right: 8px;
+    color: white;
+    font-size: 14pt;
+    padding: 2px;
+    text-transform: uppercase;
+}
+.links:hover
+{
+    color: blue ;
+}
+.menu ul
+{
+padding: 0;
+    height: 100px;
+}
+.menu ul li
+{
+    list-style: none;
+    display: inline;
+}
+
+
+/*============ Контент =============*/
+/*============ Футер =============*/
