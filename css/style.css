@@ -48,7 +48,7 @@ background: blue;
 .mid
 {
     width: 90%;
-    background: yellow;
+
     margin: 0 auto;
 }
 /*============ Шапка =============*/
@@ -99,11 +99,13 @@ div.block
 {
     width: 340px;
     height: 100%;
-    float: left;
+    float: right;
 }
-div.block:nth-last-of-type(even) {float: right}
+div.block:nth-last-of-type(even) {float: left}
 .anons {background: #f5f5 ; border: 1px solid #cccccc; padding: 20px;border-radius: 3px; text-align: center}
 
+.info-k{float: left;}
+.text-k {background: #f5f5 ; border: 1px solid #cccccc; padding: 20px;border-radius: 3px; text-align: center}
 /*============ Футер =============*/
 .footer{
 }
@@ -112,4 +114,5 @@ div.block:nth-last-of-type(even) {float: right}
     text-transform: uppercase;
 font-size: 14px;
     text-align: center;
+    color: azure;
 }
