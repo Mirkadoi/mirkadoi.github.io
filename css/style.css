@@ -101,11 +101,17 @@ div.block
     height: 100%;
     float: right;
 }
+.otz{     }
 div.block:nth-last-of-type(even) {float: left}
 .anons {background: #f5f5 ; border: 1px solid #cccccc; padding: 20px;border-radius: 3px; text-align: center}
 
-.info-k{float: left;}
+.block-k{width: 410px; height: 266px; float: right; }
+div.block-k:nth-last-of-type(even) {float: left}
 .text-k {background: #f5f5 ; border: 1px solid #cccccc; padding: 20px;border-radius: 3px; text-align: center}
+
+.checked {
+    color: orange;
+}
 /*============ Футер =============*/
 .footer{
 }
