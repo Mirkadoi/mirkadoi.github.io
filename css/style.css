@@ -19,9 +19,9 @@ html {
 position: relative;
   min-height: 100%;
 }
-body,body:focus {
+body{
   margin-bottom: 60px; /* Margin bottom by footer height */
-  outline: none;
+
 }
 button:active, button:focus {
   outline: none !important;
@@ -29,6 +29,10 @@ button:active, button:focus {
 button::-moz-focus-inner {
   border: 0 !important;
 }
+
+.btn-outline-info:focus  { outline: 0 !important; box-shadow: none !important }
+.btn:focus { outline: 0 !important; box-shadow: none !important}
+
 .footer {
   position: absolute;
   bottom: 0;
