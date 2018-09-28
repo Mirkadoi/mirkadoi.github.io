@@ -12,7 +12,7 @@
 }
 .cont {padding-top:5rem;padding-bottom:15rem;}
 .cont p {
-	color: #f8f9f3;  font-size: 2vw; font-family: 'Pacifico', cursive;}
+	color: #f8f9f3;  font-size: 2.5vw; font-family: 'Pacifico', cursive;}
  
 
 html {
@@ -21,7 +21,9 @@ position: relative;
 }
 body {
   margin-bottom: 60px; /* Margin bottom by footer height */
+
 }
+
 
 .footer {
   position: absolute;
