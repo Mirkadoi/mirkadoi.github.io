@@ -1,18 +1,15 @@
 .navbar-brand  {margin-right: 0rem; margin-left: 2rem}
 
-.jjs {
+.thumbnail {
     position: relative;
-    text-align: center;
 }
 
-.centered {
+.caption {
     position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 45%;
+    left: 0;
+    width: 100%;
 }
-.cl1 {
-	padding-right: 1px; padding-left: 1px}
  
 .centered p {
 	color: #f8f9f3;  font-size: 26px; font-family: 'Pacifico', cursive;}
