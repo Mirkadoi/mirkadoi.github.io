@@ -23,15 +23,10 @@ body{
   margin-bottom: 60px; /* Margin bottom by footer height */
 
 }
-button:active, button:focus {
-  outline: none !important;
-}
-button::-moz-focus-inner {
-  border: 0 !important;
-}
 
-.btn-outline-info:focus  { outline: 0 !important; box-shadow: none !important }
-.btn:focus { outline: 0 !important; box-shadow: none !important}
+
+.btn-outline-info:focus  {  box-shadow: none !important }
+.btn:focus {  box-shadow: none !important}
 
 .footer {
   position: absolute;
