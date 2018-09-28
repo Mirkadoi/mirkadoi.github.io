@@ -1,18 +1,21 @@
 .navbar-brand  {margin-right: 0rem; margin-left: 2rem}
 
-.container-fluid {margin-bottom: 0rem; border-radius: 0; height: 110%;    }
+.jjs {
+    position: relative;
+    text-align: center;
+}
 
-.container-fluid p {color: #f8f9f3;  font-size: 20px; font-family: 'Pacifico', cursive;}
+.centered {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.cl1 {
+	padding-right: 1px; padding-left: 1px}
  
- .cont {padding-top:5rem;padding-bottom:15rem;}
-.bgf {
-    background-image: url(../img/fon.jpg);
-
-    background-position: center;
-
-    background-size: cover;
-	
-	}
+.centered p {
+	color: #f8f9f3;  font-size: 26px; font-family: 'Pacifico', cursive;}
 	
 html {
 position: relative;
