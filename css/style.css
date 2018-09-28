@@ -10,11 +10,8 @@
 	background-repeat: no-repeat;
 
 }
-.jumbotron {
-border-radius: 0px;
-
-}
-.container-fuild p {
+.cont {padding-top:5rem;padding-bottom:15rem;}
+.cont p {
 	color: #f8f9f3;  font-size: 2vw; font-family: 'Pacifico', cursive;}
  
 
