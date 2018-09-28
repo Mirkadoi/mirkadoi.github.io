@@ -11,15 +11,13 @@
 
 }
 .jumbotron {
-
+border-radius: 0px;
 min-height: 35vw;
 }
 .container p {
-	color: #f8f9f3;  font-size: 3vw; font-family: 'Pacifico', cursive;}
- 
+	color: #f8f9f3;  font-size: 2vw; font-family: 'Pacifico', cursive;}
  
 
-	
 html {
 position: relative;
   min-height: 100%;
@@ -38,30 +36,21 @@ body {
 }
 /* ================media=========== */
 
-@media (max-width: 767px) {
-    /*xs*/
-    .btn {
-        padding: 1px 5px;
-        font-size: 12px;
-        line-height: 1.5;
-        border-radius: 3px;
-    }
+@media (max-width: 768px) {
+  .btn-responsive {
+    padding:2px 4px;
+    font-size:80%;
+    line-height: 1;
+    border-radius:3px;
+  }
 }
-@media (min-width: 768px) and (max-width: 991px) {
-    /*sm*/
-    .btn {
-        padding: 5px 10px;
-        font-size: 12px;
-        line-height: 1.5;
-        border-radius: 3px;
-    }
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .btn-responsive {
+    padding:4px 9px;
+    font-size:90%;
+    line-height: 1.2;
+  }
 }
-@media (min-width: 992px)  {
-    /*md*/
-    .btn {
-        padding: 6px 12px;
-        font-size: 14px;
-        line-height: 1.42857143;
-        border-radius: 4px;
-    }
-}
+
+
