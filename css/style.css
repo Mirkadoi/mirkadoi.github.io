@@ -41,8 +41,10 @@ body{
 .cont {padding-top:5rem;padding-bottom:15rem;}
 .cont p {
 	color: #f8f9f3;  font-size: 2.5em; font-family: 'Pacifico', cursive;}
-
-
+.nav-item{border-bottom: solid 3px transparent}
+.nav-item:hover{border-bottom: solid 3px #2a2314}
+.active{border-bottom: solid 3px #2a2314}
+.active:hover{border-bottom: solid 3px #8fa089}
 
 /* ================media============ */
 
