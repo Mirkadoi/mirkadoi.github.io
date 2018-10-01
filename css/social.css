@@ -1,10 +1,14 @@
-
+.wrapp ul {
+	padding-left: 0;
+  list-style: none;
+}
 /* Style the Un-order list by setting its list-style to none */
-.wrapp span {
+.wrapp ul li {
+	display: inline;
   margin: 0 6px;
   cursor: pointer;
   border-radius: 50%;
-  border: 5px solid #a3a8ac;
+  border: 4px solid #a3a8ac;
   transition: all 0.5s ease;
 }
 
@@ -13,55 +17,51 @@
 
 /* Style the icons by setting its color and margin-top value to 20px 
 to align it properly */
-.wrapp span .fab {
-padding-top: 4px;
-padding-bottom: 4px;
+.wrapp ul li .fab {
   color: #a3a8ac;
   transition: all 0.5s ease;
 }
 
-.wrapp span  .fa-vk{padding-left: 3px;
-padding-right: 3px;}
-.wrapp span .fa-telegram-plane{padding-left: 4px;
-padding-right: 6px;}
-.wrapp span .fa-instagram {padding-left: 5px;
-padding-right: 5px;}
+.wrapp ul li.vkontakt{padding-top: 1px; padding-left: 2px; padding-right: 2px;}
+.wrapp ul li.telegram{padding-top: 1px; padding-left: 3px; padding-right: 5px;}
+.wrapp ul li.instagram {padding-top: 1px; padding-left: 3px; padding-right: 5px;}
 /* Now target the specific li classes for styling and use box-shadow effect to border and text-shadow effect
   to icons for glowing effect and use transition property for smooth transition effect. */
 /*vk*/
-.wrapp span:hover.vkontakt {
-  border: 5px solid #3b5998;
+.wrapp ul li:hover.vkontakt {
+
+  border: 4px solid #3b5998;
   box-shadow: 0 0 15px #3b5998;
   transition: all 0.5s ease;
 }
 
-.wrapp span:hover .fa-vk {
+.wrapp ul li:hover .fa-vk {
   color: #3b5998;
   text-shadow: 0 0 15px #3b5998;
   transition: all 0.5s ease;
 }
 
 /*telega*/
-.wrapp span:hover.telegram {
-  border: 5px solid #00aced;
+.wrapp ul li:hover.telegram {
+  border: 4px solid #00aced;
   box-shadow: 0 0 15px #00aced;
   transition: all 0.5s ease;
 }
 
-.wrapp span:hover .fa-telegram-plane {
+.wrapp ul li:hover .fa-telegram-plane {
   color: #00aced;
   text-shadow: 0 0 15px #00aced;
   transition: all 0.5s ease;
 }
 
 /* instagram */
-.wrapp span:hover.instagram {
-  border: 5px solid #bc2a8d;
+.wrapp ul li:hover.instagram {
+  border: 4px solid #bc2a8d;
   box-shadow: 0 0 15px #bc2a8d;
   transition: all 0.5s ease;
 }
 
-.wrapp span:hover .fa-instagram {
+.wrapp ul li:hover .fa-instagram {
   color: #bc2a8d;
   text-shadow: 0 0 15px #bc2a8d;
   transition: all 0.5s ease;
