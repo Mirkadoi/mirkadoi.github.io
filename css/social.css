@@ -24,7 +24,7 @@ to align it properly */
 
 .wrapp ul li.vkontakt{padding-top: 1px; padding-left: 2px; padding-right: 2px;}
 .wrapp ul li.telegram{padding-top: 1px; padding-left: 3px; padding-right: 5px;}
-.wrapp ul li.instagram {padding-top: 1px; padding-left: 3px; padding-right: 5px;}
+.wrapp ul li.instagram {padding-top: 1px; padding-left: 4px; padding-right: 4px;}
 /* Now target the specific li classes for styling and use box-shadow effect to border and text-shadow effect
   to icons for glowing effect and use transition property for smooth transition effect. */
 /*vk*/
