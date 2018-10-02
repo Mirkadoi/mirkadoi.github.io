@@ -48,10 +48,11 @@ body{
 
 /* ================kafe css============ */
 .dbox-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
-.blog {    background:rgba(203,225,220, 0.8);}
+
 
 .card-text { text-align: justify;
     text-justify: inter-word;}
+
 
 /* ================media============ */
 
