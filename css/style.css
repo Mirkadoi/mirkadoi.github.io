@@ -48,7 +48,7 @@ body{
 
 /* ================kafe css============ */
 .dbox-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
-
+.blog {background: #d6fff6;}
 
 .card-text { text-align: justify;
     text-justify: inter-word;}
