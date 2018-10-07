@@ -4,6 +4,11 @@
     font-size:80%;
     line-height: 1;
   }
+  .cont p { font-size: 1.5em; } 
+   .doska-cont p{ font-size: 1.1em; }
+.metka {width: 2%; }
+
+span.socialkafe {font-size: 0.7rem;}
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
@@ -12,4 +17,16 @@
     font-size:90%;
     line-height: 1.2;
   }
+  .cont p {	font-size: 2.2em; }
+	.container-fluid.bgf {min-height:100%;}
+	
+	 .doska-cont p{ font-size: 1.25em; }
+	 .metka {width: 1.5%; }
+}
+
+@media (min-width: 992px)
+{ 
+ .container-fluid.bgf {min-height:700px;}
+ .doska-cont p{ font-size: 1.7em;}
+ .metka {width: 2%; }
 }
