@@ -32,14 +32,13 @@ function ProgressBar () {
     var findValueArr=findValue();
     var searchValue =  findValueArr[0];
     var result =  findValueArr[1];
-    console.log(findValue[1]);
     var id = setInterval(frame, 1);
     function frame() {
         if (bar.value === 100) {
             clearInterval(id);
             status.innerHTML = "100%";
             var valueToFind = document.getElementById('valueToFind').innerHTML = 'Искомое значение: ' + searchValue;
-            var todo = document.getElementById('todo').innerHTML = 'Введеные символы: ' + result;
+            var allText = document.getElementById('allText').innerHTML = 'Введеные символы: ' + result;
         } else {
             bar.value++;
             status.innerHTML = bar.value+"%";
