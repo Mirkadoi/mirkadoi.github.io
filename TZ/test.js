@@ -48,7 +48,15 @@ function ProgressBar () {
 
 
 document.getElementById('addText').addEventListener("click", empty_form);
+document.getElementById('description').addEventListener('keypress', enterCheck);
 
+    function enterCheck(event) {
+    var key = event.which || event.keyCode;
+    if (key === 13) {
+        empty_form ();
+    }
+
+}
 
 function empty_form ()
 {
