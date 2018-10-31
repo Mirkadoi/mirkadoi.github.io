@@ -1,44 +1,46 @@
-var findValue = function SearchValue () {
-    var inputText = document.getElementById('description').value;
-    var element = '';
-    element = inputText;
-    for (var i = 0; i < element.length; i++) {
-        if (i === element.indexOf(element[i]) && i === element.lastIndexOf(element[i])) {
-            var searchValue = element[i];
-            console.log(element[i]);
+function searchValue () {
+    const inputText = document.getElementById('inputText').value;
+    let foundedValue;
+    for (let i = 0; i < inputText.length; i++) {
+        if (i === inputText.indexOf(inputText[i]) && i === inputText.lastIndexOf(inputText[i])) {
+            foundedValue = inputText[i];
             break;
         } else {
-            searchValue = 'не найдено. '
+            foundedValue = "не найдено.";
         }
     }
-    var result = '';
-    for (var j = 0; j < element.length; j++) {
-        if (searchValue === element[j]) {
-            result += '<span class="clr1">' + element[j] + '</span>'
+    return foundedValue;
+}
+
+function inputResult () {
+    const inputText = document.getElementById('inputText').value;
+    let result = "";
+    for (let j = 0; j < inputText.length; j++) {
+        if (searchValue () === inputText[j]) {
+            result += '<span class="clr1">' + inputText[j] + '</span>'
         }
         else {
-            result += '<span class="clr2">' + element[j] + '</span>'
+            result += '<span class="clr2">' + inputText[j] + '</span>'
         }
     }
-    return [searchValue, result];
-};
+    return result;
+}
 
-function ProgressBar () {
+function progressBar () {
     document.getElementById('barProgress').style.visibility = 'visible';
-    var bar = document.getElementById('progressBar');
-    var status = document.getElementById('status');
+    let bar = document.getElementById('progressBar');
+    let status = document.getElementById('status');
     bar.value = 0;
     status.innerHTML = bar.value+"%";
-    var findValueArr=findValue();
-    var searchValue =  findValueArr[0];
-    var result =  findValueArr[1];
-    var id = setInterval(frame, 1);
+    let searchedValue =  searchValue();
+    let resulted =  inputResult ();
+    let id = setInterval(frame, 1);
     function frame() {
         if (bar.value === 100) {
             clearInterval(id);
             status.innerHTML = "100%";
-            var valueToFind = document.getElementById('valueToFind').innerHTML = 'Искомое значение: ' + searchValue;
-            var allText = document.getElementById('allText').innerHTML = 'Введеные символы: ' + result;
+            let valueToFind = document.getElementById('valueToFind').innerHTML = 'Искомое значение: ' + searchedValue;
+            let allText = document.getElementById('allText').innerHTML = 'Введеные символы: ' + resulted;
         } else {
             bar.value++;
             status.innerHTML = bar.value+"%";
@@ -46,32 +48,22 @@ function ProgressBar () {
     }
 }
 
-
-document.getElementById('addText').addEventListener("click", empty_form);
-document.getElementById('description').addEventListener('keypress', enterCheck);
-
-    function enterCheck(event) {
-    var key = event.which || event.keyCode;
+function enterCheck(event) {
+    let key = event.which || event.keyCode;
     if (key === 13) {
-        empty_form ();
+        emptyFormCheck ();
     }
-
 }
 
-function empty_form ()
-{
-    var empty_value  = document.getElementById('description').value;
-    if(empty_value === '')
-    {
-        alert('Вы забыли ввести текст.');
-        return false;
+function emptyFormCheck () {
+    let emptyValue = document.getElementById('inputText').value;
+    if (emptyValue === '') {
+        alert("Вы забыли ввести текст.");
     }
     else {
-        ProgressBar();
-        return true;}
-
+        progressBar();
+    }
 }
 
-
-
-
+document.getElementById('findButton').addEventListener('click', emptyFormCheck);
+document.getElementById('inputText').addEventListener('keypress', enterCheck);
