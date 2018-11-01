@@ -1,51 +1,52 @@
-function searchValue () {
-    const inputText = document.getElementById('inputText').value;
-    let foundedValue;
-    for (let i = 0; i < inputText.length; i++) {
-        if (i === inputText.indexOf(inputText[i]) && i === inputText.lastIndexOf(inputText[i])) {
-            foundedValue = inputText[i];
-            break;
-        } else {
-            foundedValue = "не найдено.";
-        }
-    }
-    return foundedValue;
-}
-
-function inputResult () {
-    const inputText = document.getElementById('inputText').value;
-    let result = "";
-    for (let j = 0; j < inputText.length; j++) {
-        if (searchValue () === inputText[j]) {
-            result += '<span class="clr1">' + inputText[j] + '</span>'
-        }
-        else {
-            result += '<span class="clr2">' + inputText[j] + '</span>'
-        }
-    }
-    return result;
-}
-
 function progressBar () {
     document.getElementById('barProgress').style.visibility = 'visible';
     let bar = document.getElementById('progressBar');
     let status = document.getElementById('status');
     bar.value = 0;
-    status.innerHTML = bar.value+"%";
     let searchedValue =  searchValue();
     let resulted =  inputResult ();
+    status.innerHTML = bar.value+"%";
     let id = setInterval(frame, 1);
     function frame() {
         if (bar.value === 100) {
             clearInterval(id);
             status.innerHTML = "100%";
-            let valueToFind = document.getElementById('valueToFind').innerHTML = 'Искомое значение: ' + searchedValue;
-            let allText = document.getElementById('allText').innerHTML = 'Введеные символы: ' + resulted;
+            writeSolution(searchedValue,resulted);
         } else {
             bar.value++;
             status.innerHTML = bar.value+"%";
         }
     }
+}
+
+function searchValue () {
+    const inputText = document.getElementById('inputText').value;
+    let searchArr = Array.from(inputText);
+    let foundedValue = searchArr.find((el) => searchArr.indexOf(el) === searchArr.lastIndexOf(el));
+    if ( !foundedValue ) {
+        foundedValue = "не найдено.";
+    }
+    return foundedValue;
+}
+
+
+function inputResult () {
+    const inputText = document.getElementById('inputText').value;
+    let result = "";
+    for(let value of inputText){
+        if (searchValue () === value) {
+            result += '<span class="clr1">' + value + '</span>'
+        }
+        else {
+            result += '<span class="clr2">' + value + '</span>'
+        }
+    }
+    return result;
+}
+
+function writeSolution(searchedValue,resulted) {
+    let valueToFind = document.getElementById('valueToFind').innerHTML = 'Искомое значение: ' + searchedValue;
+    let allText = document.getElementById('allText').innerHTML = 'Введеные символы: ' + resulted;
 }
 
 function enterCheck(event) {
