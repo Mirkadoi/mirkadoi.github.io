@@ -6,7 +6,7 @@ function progressBar () {
     let searchedValue =  searchValue();
     let resulted =  selectsValueInString ();
     status.innerHTML = `${bar.value}%`;
-    let id = setInterval(frame, 1);
+    const id = setInterval(frame, 1);
     function frame() {
         if (bar.value === 100) {
             clearInterval(id);
@@ -23,10 +23,7 @@ function searchValue () {
     const inputText = document.getElementById('inputText').value;
     let searchArr = Array.from(inputText);
     let foundedValue = searchArr.find((el) => searchArr.indexOf(el) === searchArr.lastIndexOf(el));
-    if ( !foundedValue ) {
-        foundedValue = `не найдено.`;
-    }
-    return foundedValue;
+    return foundedValue || 'не найдено';
 }
 
 function selectsValueInString () {
@@ -35,18 +32,18 @@ function selectsValueInString () {
     let fondedValue = searchValue();
     for(let value of inputText){
         if (fondedValue === value) {
-            result += '<span class="clr1">' + value + '</span>'
+            result +=`<span class="clr1">${value}</span>`
         }
         else {
-            result += '<span class="clr2">' + value + '</span>'
+            result +=`<span class="clr2">${value}</span>`
         }
     }
     return result;
 }
 
 function writeSolution(searchedValue,resulted) {
-    let valueToFind = document.getElementById('valueToFind').innerHTML = `Искомое значение:  ${searchedValue}`;
-    let allText = document.getElementById('allText').innerHTML = `Введеные символы:  ${resulted}`;
+    document.getElementById('valueToFind').innerHTML = `Искомое значение:  ${searchedValue}`;
+    document.getElementById('allText').innerHTML = `Введеные символы:  ${resulted}`;
 }
 
 function enterCheck(event) {
