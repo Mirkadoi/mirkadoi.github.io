@@ -1,20 +1,20 @@
 function progressBar () {
     document.getElementById('barProgress').style.visibility = 'visible';
-    let bar = document.getElementById('progressBar');
-    let status = document.getElementById('status');
+    const bar = document.getElementById('progressBar');
+    const status = document.getElementById('status');
     bar.value = 0;
     let searchedValue =  searchValue();
-    let resulted =  inputResult ();
-    status.innerHTML = bar.value+"%";
+    let resulted =  selectsValueInString ();
+    status.innerHTML = `${bar.value}%`;
     let id = setInterval(frame, 1);
     function frame() {
         if (bar.value === 100) {
             clearInterval(id);
-            status.innerHTML = "100%";
+            status.innerHTML = '100%';
             writeSolution(searchedValue,resulted);
         } else {
-            bar.value++;
-            status.innerHTML = bar.value+"%";
+            bar.value+=1;
+            status.innerHTML = `${bar.value}%`;
         }
     }
 }
@@ -24,17 +24,17 @@ function searchValue () {
     let searchArr = Array.from(inputText);
     let foundedValue = searchArr.find((el) => searchArr.indexOf(el) === searchArr.lastIndexOf(el));
     if ( !foundedValue ) {
-        foundedValue = "не найдено.";
+        foundedValue = `не найдено.`;
     }
     return foundedValue;
 }
 
-
-function inputResult () {
+function selectsValueInString () {
     const inputText = document.getElementById('inputText').value;
     let result = "";
+    let fondedValue = searchValue();
     for(let value of inputText){
-        if (searchValue () === value) {
+        if (fondedValue === value) {
             result += '<span class="clr1">' + value + '</span>'
         }
         else {
@@ -45,8 +45,8 @@ function inputResult () {
 }
 
 function writeSolution(searchedValue,resulted) {
-    let valueToFind = document.getElementById('valueToFind').innerHTML = 'Искомое значение: ' + searchedValue;
-    let allText = document.getElementById('allText').innerHTML = 'Введеные символы: ' + resulted;
+    let valueToFind = document.getElementById('valueToFind').innerHTML = `Искомое значение:  ${searchedValue}`;
+    let allText = document.getElementById('allText').innerHTML = `Введеные символы:  ${resulted}`;
 }
 
 function enterCheck(event) {
@@ -59,7 +59,7 @@ function enterCheck(event) {
 function emptyFormCheck () {
     let emptyValue = document.getElementById('inputText').value;
     if (emptyValue === '') {
-        alert("Вы забыли ввести текст.");
+        alert(`Вы забыли ввести текст.`);
     }
     else {
         progressBar();
